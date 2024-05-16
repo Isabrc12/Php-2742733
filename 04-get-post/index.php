@@ -10,8 +10,6 @@ echo '<br>';
 echo $userEmail;
 
 
-
-
 ?>
 
 <!DOCTYPE html>
