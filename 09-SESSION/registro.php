@@ -11,9 +11,9 @@ if(empty($usuario) or empty($password)){
     echo 'Rellene completo el formulario';
 }else{
     //echo $usuario . ' - ' . $password;
-    $_SESSION['userRegister'] = $usuario;
+    /* $_SESSION['userRegister'] = $usuario;
     $_SESSION['passRegister'] = $password;
-    $_SESSION['emailRegister'] = $email;
+    $_SESSION['emailRegister'] = $email; */
     //echo '- Variables de sesión guardadas 🤩';
     //header('Location: index.php);
 

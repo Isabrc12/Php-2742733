@@ -13,12 +13,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo 'Rellene completo el formulario';
     } else {
         //echo $usuario . ' - ' . $password;
-        if ($usuario ==  $user_register && $password == $pass_register) {
+        try {
+
+            $conexion = new PDO("mysql: host=localhost; dbname=focaapp", 'root', '');
+            echo "Conexion OK" . "<br>";
+        } catch (PDOException $e) {
+            echo "Error:" . $e->getMessage() . "<br>";
+        }
+
+        $statement = $conexion -> prepare("SELECT * FROM `usersapp` WHERE username = :user AND password = :pass");
+
+        $statement -> execute(array( ':user'=>$usuario, ':pass'=>$password));
+
+        $result = $statement -> fetch();
+
+        if ($result) {
+            echo 'true';
+            $_SESSION['userRegister'] = $usuario;
+            $_SESSION['passRegister'] = $password;
+            $_SESSION['correoRegister'] = $correo;
+            header ('Location: user.php');
+        } else {echo 'false';}
+        
+        /*   if ($usuario ==  $user_register && $password == $pass_register) {
             echo 'Listo, iniciaste sesión 🥰';
             header('Location: user.php');
         } else {
             echo '<br>' . 'Tu usuario no existe 😭';
-        }
+        } */
     }
 }
 
