@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo 'true';
             $_SESSION['userRegister'] = $usuario;
             $_SESSION['passRegister'] = $password;
-            $_SESSION['correoRegister'] = $correo;
+            $_SESSION['emailRegister'] = $email;
             header ('Location: user.php');
         } else {echo 'false';}
         
