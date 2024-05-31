@@ -21,20 +21,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Error:" . $e->getMessage() . "<br>";
         }
 
-        $statement = $conexion -> prepare("SELECT * FROM `usersapp` WHERE username = :user AND password = :pass");
+        $statement = $conexion->prepare("SELECT * FROM `usersapp` WHERE username = :user AND password = :pass");
 
-        $statement -> execute(array( ':user'=>$usuario, ':pass'=>$password));
+        $statement->execute(array(':user' => $usuario, ':pass' => $password));
 
-        $result = $statement -> fetch();
+        $result = $statement->fetch();
 
         if ($result) {
             echo 'true';
             $_SESSION['userRegister'] = $usuario;
             $_SESSION['passRegister'] = $password;
             $_SESSION['emailRegister'] = $email;
-            header ('Location: user.php');
-        } else {echo 'false';}
-        
+            header('Location: user.php');
+        } else {
+            echo 'false';
+        }
+
         /*   if ($usuario ==  $user_register && $password == $pass_register) {
             echo 'Listo, iniciaste sesión 🥰';
             header('Location: user.php');
@@ -55,22 +57,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div class="contenedor">
+        <div class="contenedor-todo">
+            <h1>Página de inicio</h1>
 
-    <h1>Página de inicio</h1>
+            <form action="index.php" method="POST">
+                <label for="user">User</label>
+                <input type="text" placeholder="User" name="user">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" name="password">
+                <button type="submit">Iniciar</button>
+            </form>
 
-    <form action="index.php" method="POST">
-        <label for="user">User</label>
-        <input type="text" placeholder="User" name="user">
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" name="password">
-        <button type="submit">Iniciar</button>
-    </form>
-
-    <a href="./registro.php">Registrate</a>
-
+            <a href="./registro.php">Registrate</a>
+        </div>
+    </div>
 
 </body>
 
