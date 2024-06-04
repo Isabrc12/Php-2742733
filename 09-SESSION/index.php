@@ -61,21 +61,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <div class="contenedor">
-        <div class="contenedor-todo">
+    <div class="todo">
+        <div class="contenedor">
             <h1>Página de inicio</h1>
-
             <form action="index.php" method="POST">
                 <label for="user">User</label>
+                <br>
                 <input type="text" placeholder="User" name="user">
+                <br> <br>
                 <label for="password">Password</label>
+                <br>
                 <input type="password" placeholder="Password" name="password">
-                <button type="submit">Iniciar</button>
+                <br> <br>
+                <button type="submit" class="boton">Iniciar</button>
+                <br> <br>
             </form>
-
             <a href="./registro.php">Registrate</a>
         </div>
     </div>
+
+
+
+    </div>
+    </div>
+
+
+
 
 </body>
 

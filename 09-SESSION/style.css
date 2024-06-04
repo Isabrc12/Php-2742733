@@ -1,0 +1,30 @@
+body{
+    background-image: url(./img/fondo\ rosadito2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boton{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.todo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.contenedor{
+    background-color: white;
+    width: 20rem;
+    border-radius: 5px;
+    box-shadow: 5px 9px 15px 1px black;
+    padding: 1rem;
+    font-size: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
