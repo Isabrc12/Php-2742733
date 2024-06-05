@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -65,18 +65,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="contenedor">
             <h1>Página de inicio</h1>
             <form action="index.php" method="POST">
-                <label for="user">User</label>
-                <br>
-                <input type="text" placeholder="User" name="user">
-                <br> <br>
-                <label for="password">Password</label>
-                <br>
-                <input type="password" placeholder="Password" name="password">
+                <label for="user"></label>
+                <input class="barra" type="text" placeholder="User" name="user">
+                <input class="barra" type="password" placeholder="Password" name="password">
                 <br> <br>
                 <button type="submit" class="boton">Iniciar</button>
                 <br> <br>
             </form>
-            <a href="./registro.php">Registrate</a>
+            <a href="./registro.php" class="boton1">Registrate</a>
         </div>
     </div>
 

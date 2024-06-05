@@ -11,15 +11,19 @@ session_destroy();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cerrar.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <h1>Sesión finalizada</h1>
-    <a href="./user.php">User page</a>
-    <a href="./index.php">Inciar sesión</a>
-
+    <div class="todo">
+        <div class="padre">
+            <h1>Sesión finalizada</h1>
+            <a href="./user.php" class="botonindex">User page</a>
+            <a href="./index.php" class="botoncerrar">Inciar sesión</a>
+        </div>
+    </div>
 
 </body>
 
