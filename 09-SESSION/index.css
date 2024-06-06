@@ -6,10 +6,11 @@ body{
 
 .boton{
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
-    padding: 8px;
+    border: .5px solid black;
+    padding: 10px;
     color: black;
 }
+
 
 .boton1{
     color:  rgb(249, 130, 150);
