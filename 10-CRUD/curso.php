@@ -22,8 +22,8 @@ require ('conexion.php');
             <label for="Imagen">Imagen...</label>
             <input type="file" id="Imagen" name="Imagen" required>
 
-            <label for="Curso">Curso...</label>
-            <input type="text" id="Curso" name="Curso" required>
+            <label for="Titulo">Titulo</label>
+            <input type="text" id="Titulo" name="Titulo" required>
 
             <label for="Descripcion">Descripcion...</label>
             <input type="text" id="Descripcion" name="Descripcion" required>
