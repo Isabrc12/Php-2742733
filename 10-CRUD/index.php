@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -39,18 +43,6 @@
         </div>
     </div>
 
-    <div>
-        <div class="container text-center">
-            <div class="row align-items-start">
-                <div class="col">
-                Nuestros cursos están diseñados para brindarte una experiencia completa y práctica en el mundo del maquillaje. Desde principiantes hasta aquellos con experiencia, ¡tenemos algo para todos! A través de clases interactivas, aprenderás técnicas profesionales, trucos y consejos para perfeccionar tu habilidad y elevar tu juego de maquillaje al siguiente nivel.
-                </div>
-                <div class="col">
-                
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
 
@@ -89,6 +81,19 @@
             </div>
         </div>
 
+    </div>
+    <div class="container text-center" style="margin-top: 30px; background-color: white;">
+        <div class="row align-items-center">
+            <div class="col" >
+
+                <h1>Maquillaje</h1>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi quidem vero iusto fugit dignissimos non accusamus soluta autem perspiciatis aperiam magnam sapiente culpa incidunt, quod nemo facere cupiditate eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti qui assumenda omnis veritatis alias, temporibus quod doloribus aspernatur consequuntur dicta perspiciatis, expedita corporis suscipit eum, unde eaque aliquam at repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ut a ducimus repudiandae voluptatem nihil excepturi facere, temporibus, at perferendis cupiditate consectetur saepe, animi hic consequuntur placeat dolore quae minus.
+            </div>
+            <div class="col" style="padding: 20px;">
+                <img src="./img/brochas.jfif" alt="">
+            </div>
+        </div>
     </div>
 
 
