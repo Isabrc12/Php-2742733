@@ -49,6 +49,7 @@ require('header.php')
             <th>Titulo</th>
             <th>Descripcion</th>
             <th>Estudiantes</th>
+            <th>Accion</th>
         </tr>
     </thead>
     <tbody>
@@ -64,6 +65,10 @@ require('header.php')
                 <td><?php echo $item['titulo'] ?></td>
                 <td><?php echo $item['descripcion'] ?></td>
                 <td><?php echo $item['estudiantes'] ?></td>
+                <td class="d-flex gap-4">
+                    <a class="text-success" href="editar_curso.php?id=<?php echo $item['id'] ?>"><i class="bi bi-pencil-fill"></i></a>
+                    <a class="text-danger" href="borrar_curso.php?id=<?php echo $item['id'] ?>"><i class="bi bi-trash2-fill"></i></a>
+                </td>
             </tr>
         <?php } ?>
 
