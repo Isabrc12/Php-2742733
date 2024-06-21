@@ -61,7 +61,7 @@ require('header.php')
         foreach ($result as $item) { ?>
             <tr>
                 <td scope="row"><?php echo $item['id'] ?></td>
-                <td><?php echo $item['imagen'] ?></td>
+                <td> <img src="<?php echo $item['imagen'] ?>" width="100" alt=""></td>
                 <td><?php echo $item['titulo'] ?></td>
                 <td><?php echo $item['descripcion'] ?></td>
                 <td><?php echo $item['estudiantes'] ?></td>
