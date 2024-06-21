@@ -22,7 +22,7 @@ require('header.php')
     <?php session_unset();
     } ?>
 
-    <form action="agregar_curso.php" method="post">
+    <form action="agregar_curso.php" method="post" enctype="multipart/form-data">
         <label for="Imagen">Imagen...</label>
         <input type="file" id="Imagen" name="Imagen" required>
 
