@@ -1,6 +1,4 @@
-
-
-
+<?php require('conexion.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -48,43 +47,38 @@
 
         <div class="container text-center">
             <div class="row align-items-center">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./img/maquillaje1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Curso de maquillaje (Nivel basico)</h5>
-                            <p class="card-text">Este curso de maquillaje básico ofrece una introducción completa a las técnicas esenciales, desde la preparación de la piel hasta la aplicación de sombras y labiales.</p>
-                            <a href="#" class="btn btn-secondary">Ver más</a>
-                        </div>
+                <?php
+                $statement = $conexion->prepare("SELECT * FROM cursos");
+                $statement->execute();
+                $result = $statement->fetchAll();
+
+
+                foreach ($result as $item) { ?>
+
+                    <div class="col">
+                        <a class="no-link" href="producto.php?id=<?php echo $item['id'] ?>">
+                            <div class="card" style="width: 18rem;">
+                                <img src="<?php echo $item['imagen'] ?>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"> <?php echo $item['titulo'] ?> </h5>
+                                    <p class="card-text"> <?php echo $item['descripcion'] ?> </p>
+                                    <div><i class="bi bi-people-fill"></i><span><?php echo $item['estudiantes'] ?></span></div>
+                                </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./img/maquillaje2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Curso de maquillaje (Nivel intermedio)</h5>
-                            <p class="card-text">Este curso de maquillaje de nivel intermedio impulsa habilidades avanzadas, guiando a los estudiantes hacia la maestría en técnicas versátiles y expresivas bajo la tutela de instructores expertos.</p>
-                            <a href="#" class="btn btn-secondary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./img/maquillaje3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Curso de maquillaje (Nivel profesional)</h5>
-                            <p class="card-text">El curso de maquillaje profesional ofrece una inmersión completa en técnicas de vanguardia, desde la creación de looks de pasarela hasta el dominio de la aerografía.</p>
-                            <a href="#" class="btn btn-secondary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+        <?php }  ?>
+
+
+
         </div>
+    </div>
 
     </div>
     <div class="container text-center" style="margin-top: 30px; background-color: white;">
         <div class="row align-items-center">
-            <div class="col" >
+            <div class="col">
 
                 <h1>Maquillaje</h1>
 
