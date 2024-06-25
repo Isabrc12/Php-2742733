@@ -76,4 +76,6 @@ require('header.php')
     </tbody>
 </table>
 
+<button link="index.php" type="button" class="boton-tabla"><a href="./index.php">Administra</a></button>
+
 <?php require('footer.php') ?>

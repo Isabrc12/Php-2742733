@@ -65,12 +65,14 @@
                                     <div><i class="bi bi-people-fill"></i><span><?php echo $item['estudiantes'] ?></span></div>
                                 </div>
                         </a>
+
+            
                     </div>
             </div>
 
         <?php }  ?>
 
-
+        <button class="boton" link="curso.php" type="button" ><a href="./curso.php">Administra</a></button>
 
         </div>
     </div>
